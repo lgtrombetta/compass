@@ -12,6 +12,8 @@
 #include <math.h>
 #include <QDir>
 
+#define CACHEDIR std::string("/home/phablet/.cache/xompass.emanuelesorcr/")
+
 using namespace std;
 
 MyType::MyType(QObject *parent) :
@@ -19,8 +21,8 @@ MyType::MyType(QObject *parent) :
     m_message("test")
 {
     QDir dir;
-    dir.mkpath("/home/phablet/.cache/compass.kwek/");
-    ifstream myfile ("/home/phablet/.cache/compass.kwek/calibration.kwek");
+    dir.mkpath(CACHEDIR.c_str());
+    ifstream myfile (CACHEDIR + "calibration.kwek");
 
     //ifstream myfile ("/home/phablet/.local/share/compass/calibration.txt",ios::in);
     //ifstream myfile ("calibration.txt",ios::in);
@@ -80,7 +82,7 @@ QString MyType::calibrate()
     }
 
     QString output="calibration failed!";
-    ofstream myfile ("/home/phablet/.cache/compass.kwek/calibration.kwek");
+    ofstream myfile (CACHEDIR + "calibration.kwek");
     //ofstream myfile ("calibration.txt");
     //ofstream myfile ("/tmp/calibration.kwek");
     if (myfile.is_open())

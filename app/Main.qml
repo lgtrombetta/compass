@@ -13,7 +13,7 @@ MainView {
     // objectName for functional testing purposes (autopilot-qt5)
     objectName: "mainView"
     // Note! applicationName needs to match the "name" field of the click manifest
-    applicationName: "compass.kwek" //COMPASS ID
+    applicationName: "xompass.emanuelesorce" //COMPASS ID
     width: units.gu(100)
     height: units.gu(75)
     property int kot: 0
