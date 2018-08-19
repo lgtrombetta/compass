@@ -24,8 +24,8 @@ set(QT_IMPORTS_DIR "lib/${ARCH_TRIPLET}")
 
 option(INSTALL_TESTS "Install the tests on make install" on)
 
-set(APP_NAME          compass)
-set(APP_ID            "compass.kwek")
+set(APP_NAME          Xompass)
+set(APP_ID            "xompass.emanuelesorce")
 set(COMPASS_DIR "share/qml/compass")
 set(MAIN_QML          "Main.qml")
 set(ICON              "graphics/compass.png")

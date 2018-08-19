@@ -1,5 +1,5 @@
 [Desktop Entry]
-_Name=Compass
+_Name=Xompass
 Comment=Reading from the internal magnetic sensor
 Exec=@EXEC@
 Icon=@ICON@
