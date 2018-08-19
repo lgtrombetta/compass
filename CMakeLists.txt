@@ -1,9 +1,12 @@
 project(compass C CXX)
-cmake_minimum_required(VERSION 2.8.9)
+cmake_minimum_required(VERSION 3.1)
 
 # Do not remove this line, its required for the correct functionality of the Ubuntu-SDK
 set(UBUNTU_MANIFEST_PATH "manifest.json.in" CACHE INTERNAL "Tells QtCreator location and name of the manifest file")
 set (CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
+
+set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 find_package(Qt5Core)
 find_package(Qt5Qml)
@@ -36,7 +39,8 @@ set(DATA_DIR /)
 set(DESKTOP_DIR ${DATA_DIR})
 set(DESKTOP_FILE_NAME "compass.desktop")
 
-set(EXEC "qmlscene $@ ${COMPASS_DIR}/${MAIN_QML}")
+#set(EXEC "qmlscene $@ ${COMPASS_DIR}/${MAIN_QML}")
+set(EXEC "qmlscene ${COMPASS_DIR}/${MAIN_QML}")
 
 # This command figures out the target architecture for use in the manifest file
 execute_process(
