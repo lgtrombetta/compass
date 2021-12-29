@@ -31,7 +31,7 @@ set(APP_NAME          Compass)
 set(APP_ID            "xompass.emanuelesorce")
 set(COMPASS_DIR "share/qml/compass")
 set(MAIN_QML          "Main.qml")
-set(ICON              "graphics/compass.png")
+set(ICON              "graphics/logo.png")
 
 # Set install paths
 set(CMAKE_INSTALL_PREFIX /)
