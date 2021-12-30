@@ -23,8 +23,8 @@ MainView {
 		active: true
 
 		onReadingChanged: {
-			kot = compass.reading.azimuth;
-			igla.rotation = kot
+			kot = - compass.reading.azimuth;
+			igla.rotation = kot;
             calibration = compass.reading.calibrationLevel * 100
 		}
 	}
